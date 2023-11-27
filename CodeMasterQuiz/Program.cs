@@ -13,8 +13,6 @@ public class Program{
         List<QuestionJson> source = new List<QuestionJson>();
         bool gameover=false;
         string line = "0";
-        string test1= "1";
-        string test2= "2";
         string sep = "\n--------------------------------------------------\n";
         Console.WriteLine(sep +"Bienvenue sur CodeMaster Quiz \n\n1. Pour démarrer \n2. Quitter\n\n Votre réponse ->");
         source = RecupJsonQuestion("../../../question.json");
