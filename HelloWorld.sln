@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorld", "HelloWorld\HelloWorld.csproj", "{DF90A7EB-46F4-4248-8A57-807A77C31694}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeMasterQuiz", "CodeMasterQuiz\CodeMasterQuiz.csproj", "{C6BBFB05-DEF3-4DCB-9FBD-362CEEA7FC7A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{DF90A7EB-46F4-4248-8A57-807A77C31694}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DF90A7EB-46F4-4248-8A57-807A77C31694}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DF90A7EB-46F4-4248-8A57-807A77C31694}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6BBFB05-DEF3-4DCB-9FBD-362CEEA7FC7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6BBFB05-DEF3-4DCB-9FBD-362CEEA7FC7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6BBFB05-DEF3-4DCB-9FBD-362CEEA7FC7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6BBFB05-DEF3-4DCB-9FBD-362CEEA7FC7A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

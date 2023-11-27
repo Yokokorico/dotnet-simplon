@@ -1,0 +1,15 @@
+C:\Users\yokod\Documents\Simplon\.Net\Projet\CodeMasterQuiz\bin\Debug\net6.0\CodeMasterQuiz.exe
+C:\Users\yokod\Documents\Simplon\.Net\Projet\CodeMasterQuiz\bin\Debug\net6.0\CodeMasterQuiz.deps.json
+C:\Users\yokod\Documents\Simplon\.Net\Projet\CodeMasterQuiz\bin\Debug\net6.0\CodeMasterQuiz.runtimeconfig.json
+C:\Users\yokod\Documents\Simplon\.Net\Projet\CodeMasterQuiz\bin\Debug\net6.0\CodeMasterQuiz.dll
+C:\Users\yokod\Documents\Simplon\.Net\Projet\CodeMasterQuiz\bin\Debug\net6.0\CodeMasterQuiz.pdb
+C:\Users\yokod\Documents\Simplon\.Net\Projet\CodeMasterQuiz\obj\Debug\net6.0\CodeMasterQuiz.csproj.AssemblyReference.cache
+C:\Users\yokod\Documents\Simplon\.Net\Projet\CodeMasterQuiz\obj\Debug\net6.0\CodeMasterQuiz.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\yokod\Documents\Simplon\.Net\Projet\CodeMasterQuiz\obj\Debug\net6.0\CodeMasterQuiz.AssemblyInfoInputs.cache
+C:\Users\yokod\Documents\Simplon\.Net\Projet\CodeMasterQuiz\obj\Debug\net6.0\CodeMasterQuiz.AssemblyInfo.cs
+C:\Users\yokod\Documents\Simplon\.Net\Projet\CodeMasterQuiz\obj\Debug\net6.0\CodeMasterQuiz.csproj.CoreCompileInputs.cache
+C:\Users\yokod\Documents\Simplon\.Net\Projet\CodeMasterQuiz\obj\Debug\net6.0\CodeMasterQuiz.dll
+C:\Users\yokod\Documents\Simplon\.Net\Projet\CodeMasterQuiz\obj\Debug\net6.0\refint\CodeMasterQuiz.dll
+C:\Users\yokod\Documents\Simplon\.Net\Projet\CodeMasterQuiz\obj\Debug\net6.0\CodeMasterQuiz.pdb
+C:\Users\yokod\Documents\Simplon\.Net\Projet\CodeMasterQuiz\obj\Debug\net6.0\CodeMasterQuiz.genruntimeconfig.cache
+C:\Users\yokod\Documents\Simplon\.Net\Projet\CodeMasterQuiz\obj\Debug\net6.0\ref\CodeMasterQuiz.dll
