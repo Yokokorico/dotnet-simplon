@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Taqs0VIuQRozdDviqOIBQItACAlO34C0d9G1VZTLPma2tJL/ER7FdEx9oyw+IbIqCc8nsJUmhSJW/guEcrW+vg==",
+  "dgSpecHash": "s6UYAKoxF2SeiRdBge5lVEb4lHcDmIAUHxw/igRHXrRFdVLWUYtyCqPcgIbCFjQLKTMkHLDR5I9zkfHxKEiy6g==",
   "success": true,
   "projectFilePath": "C:\\Users\\yokod\\Documents\\Simplon\\.Net\\Projet\\CodeMasterQuiz\\CodeMasterQuiz.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\yokod\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

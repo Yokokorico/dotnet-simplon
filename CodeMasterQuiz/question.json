@@ -1,97 +1,44 @@
-[{
-  "Question" : "En quelle année est mort Alan Turing",
-  "Reponse1" : "1985",
-  "Reponse2" : "1954",
-  "Reponse3" : "1952",
-  "Reponse4" : "1874",
-  "resultat" : 2,
-  "difficulte" : 4
-},{
-  "Question" : "Ou est lille ? ",
-  "Reponse1" : "Nord",
-  "Reponse2" : "Sud",
-  "Reponse3" : "Est",
-  "Reponse4" : "Ouest",
-  "resultat" : 1,
-  "difficulte" : 1
-},{
-  "Question" : "En quelle année est mort Alan Turing",
-  "Reponse1" : "1985",
-  "Reponse2" : "1954",
-  "Reponse3" : "1952",
-  "Reponse4" : "1874",
-  "resultat" : 2,
-  "difficulte" : 4
-},{
-  "Question" : "En quelle année est mort Alan Turing",
-  "Reponse1" : "1985",
-  "Reponse2" : "1954",
-  "Reponse3" : "1952",
-  "Reponse4" : "1874",
-  "resultat" : 2,
-  "difficulte" : 4
-},{
-  "Question" : "En quelle année est mort Alan Turing",
-  "Reponse1" : "1985",
-  "Reponse2" : "1954",
-  "Reponse3" : "1952",
-  "Reponse4" : "1874",
-  "resultat" : 2,
-  "difficulte" : 4
-},{
-  "Question" : "En quelle année est mort Alan Turing",
-  "Reponse1" : "1985",
-  "Reponse2" : "1954",
-  "Reponse3" : "1952",
-  "Reponse4" : "1874",
-  "resultat" : 2,
-  "difficulte" : 4
-},{
-  "Question" : "En quelle année est mort Alan Turing",
-  "Reponse1" : "1985",
-  "Reponse2" : "1954",
-  "Reponse3" : "1952",
-  "Reponse4" : "1874",
-  "resultat" : 2,
-  "difficulte" : 4
-},{
-  "Question" : "En quelle année est mort Alan Turing",
-  "Reponse1" : "1985",
-  "Reponse2" : "1954",
-  "Reponse3" : "1952",
-  "Reponse4" : "1874",
-  "resultat" : 2,
-  "difficulte" : 4
-},{
-  "Question" : "En quelle année est mort Alan Turing",
-  "Reponse1" : "1985",
-  "Reponse2" : "1954",
-  "Reponse3" : "1952",
-  "Reponse4" : "1874",
-  "resultat" : 2,
-  "difficulte" : 4
-},{
-  "Question" : "En quelle année est mort Alan Turing",
-  "Reponse1" : "1985",
-  "Reponse2" : "1954",
-  "Reponse3" : "1952",
-  "Reponse4" : "1874",
-  "resultat" : 2,
-  "difficulte" : 4
-},{
-  "Question" : "En quelle année est mort Alan Turing",
-  "Reponse1" : "1985",
-  "Reponse2" : "1954",
-  "Reponse3" : "1952",
-  "Reponse4" : "1874",
-  "resultat" : 2,
-  "difficulte" : 4
-},{
-  "Question" : "En quelle année est mort Alan Turing",
-  "Reponse1" : "1985",
-  "Reponse2" : "1954",
-  "Reponse3" : "1952",
-  "Reponse4" : "1874",
-  "resultat" : 2,
-  "difficulte" : 4
-}]
+[
+  {
+    "Quizz": [
+      {
+        "Category": "Sport",
+        "Questions": [
+          {
+            "IntituleQuestion": "Salut ça va ?",
+            "Reponses": [
+              { "InitituleReponse": "Ouais" },
+              { "InitituleReponse": "Bof" }
+            ],
+        "Resultat":[
+        {"Reponse" : "Ouais"},
+        {"Descriptif": "Ah bah ouais"},
+        {"Difficulte":1}
+        ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Quizz": [
+      {
+        "Category": "Web",
+        "Questions": [
+          {
+            "IntituleQuestion": "java qui?",
+            "Reponses": [
+              { "InitituleReponse": "oracle " },
+              { "InitituleReponse": "mircorsoft" }
+            ],
+        "Resultat":[
+        {"Reponse" : "java"},
+        {"Descriptif": "Ah bah ouais"},
+        {"Difficulte":2}
+        ]
+          }
+        ]
+      }
+    ]
+  }
+]

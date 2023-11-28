@@ -13,3 +13,5 @@ C:\Users\yokod\Documents\Simplon\.Net\Projet\CodeMasterQuiz\obj\Debug\net6.0\ref
 C:\Users\yokod\Documents\Simplon\.Net\Projet\CodeMasterQuiz\obj\Debug\net6.0\CodeMasterQuiz.pdb
 C:\Users\yokod\Documents\Simplon\.Net\Projet\CodeMasterQuiz\obj\Debug\net6.0\CodeMasterQuiz.genruntimeconfig.cache
 C:\Users\yokod\Documents\Simplon\.Net\Projet\CodeMasterQuiz\obj\Debug\net6.0\ref\CodeMasterQuiz.dll
+C:\Users\yokod\Documents\Simplon\.Net\Projet\CodeMasterQuiz\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\yokod\Documents\Simplon\.Net\Projet\CodeMasterQuiz\obj\Debug\net6.0\CodeMasterQuiz.csproj.CopyComplete
