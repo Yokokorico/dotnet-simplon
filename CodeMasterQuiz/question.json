@@ -7,11 +7,13 @@
           {
             "IntituleQuestion": "Salut ça va ?",
             "Reponses": [
-              { "InitituleReponse": "Ouais" },
-              { "InitituleReponse": "Bof" }
+              { "Index":1,"InitituleReponse": "Ouais" },
+              { "Index":2,"InitituleReponse": "Bah non" },
+              { "Index":3,"InitituleReponse": "Ouais" },
+              { "Index":4,"InitituleReponse": "Bof" }
             ],
         "Resultat":[
-        {"Reponse" : "Ouais"},
+        {"Reponse" : 1},
         {"Descriptif": "Ah bah ouais"},
         {"Difficulte":1}
         ]
@@ -28,11 +30,13 @@
           {
             "IntituleQuestion": "java qui?",
             "Reponses": [
-              { "InitituleReponse": "oracle " },
-              { "InitituleReponse": "mircorsoft" }
+              { "Index":1,"InitituleReponse": "oracle " },
+              { "Index":2,"InitituleReponse": "mircorsoft" },
+              { "Index":3,"InitituleReponse": "Ouais" },
+              { "Index":4,"InitituleReponse": "Bof" }
             ],
         "Resultat":[
-        {"Reponse" : "java"},
+        {"Reponse" : 1},
         {"Descriptif": "Ah bah ouais"},
         {"Difficulte":2}
         ]
