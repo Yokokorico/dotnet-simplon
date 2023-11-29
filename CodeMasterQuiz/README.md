@@ -1,10 +1,10 @@
 # Récupérer le projet
 
-Bienvenue, pour récupérer le projet il suffit de ....
+Bienvenue, pour récupérer le projet il suffit de télécharger le zip du code sur github à l'adresse suivante (https://github.com/Yokokorico/dotnet-simplon) et de la dezip
 
 # Lancer le projet 
 
-Pour lancer le projet ...
+Pour lancer le projet lancer un terminal aller dans le dossier CodeMasterQuiz->bin
 
 # Les étapes de mon jeu de quizz :
 
