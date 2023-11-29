@@ -1,3 +1,5 @@
+namespace Classes;
+
 public class Question
     {
         public string? IntituleQuestion { get; set; }

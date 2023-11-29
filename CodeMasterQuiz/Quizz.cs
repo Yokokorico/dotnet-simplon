@@ -1,3 +1,5 @@
+namespace Classes;
+
 public class Quizz
     {
         public string? Category { get; set; }

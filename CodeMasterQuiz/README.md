@@ -4,29 +4,40 @@ Bienvenue, pour récupérer le projet il suffit de télécharger le zip du code 
 
 # Lancer le projet 
 
-Pour lancer le projet lancer un terminal aller dans le dossier CodeMasterQuiz->bin
+Pour lancer le projet lancer un terminal aller dans le dossier CodeMasterQuiz->bin->Debug->net6.0 puis lancer le .exe
 
-# Les étapes de mon jeu de quizz :
+## Recupération depuis un fichier JSON
+Utilisation de la méthode **RecupJsonQuestion()** pour récuperer les données dans le fichier JSON question.json
+### Structure du fichier JSON
+    
+    "Quizz": [
+        {
+            "Category": "",
+            "Questions": [
+                {
+                    "IntituleQuestion": "",
+                    "Reponses": [
+                        { "Index":1,"InitituleReponse": "" },
+                        { "Index":2,"InitituleReponse": "" },
+                        { "Index":3,"InitituleReponse": "" },
+                        { "Index":4,"InitituleReponse": "" }
+                    ],
+                    "Resultat":[
+                        {"Reponse" : 0},
+                        {"Descriptif": ""},
+                        {"Difficulte":0}
+                    ]
+                }
+            ]
+        }
+    ]
 
-Pour se faciliter la vie, on a au début une seule catégorie. Chaque titre et sous titre de ce readme.md doit être transformé en méthode.
 
-## Ecrire les questions en "dur" dans le code
+## Affichage du ménu principale
 
-3 questions récupérées en "dur" dans un premier temps
- - ``` var questionUne = "Et sinon ça va ?"```
- - ``` var reponseUne = "Ouais et toi ?"```
- - ``` var reponseDeux = "Non pas trop frère."```
- - ``` var reponseTrois = "C'est la hess."```
+Après avoir entrée son nom l'écran du menu de demarrage est affiché avec la méthode **Demarrage()**
 
-## Depuis un fichier dans un second temps
-
-### Récupérer la premier ligne du fichier CSV
-
-Utilisation de la méthode ... pour récupérer lSéparer les champs ...
-
-### Récupérer la liste des questions
-
-Quelle est la structure de ma liste de questions ?
+### Quelle est la structure de ma liste de questions ?
  - **Les différents type de collection**
 
 1. List<>
@@ -35,8 +46,6 @@ Quelle est la structure de ma liste de questions ?
 
 Si on fait un tableau de string pour lister les intitulés, comment lier chaque question à ses réponses ?
 Il est temps de construire des classes : une classe Question qui contient une liste de réponse.
-
-## Acceuillir le joueur
 
 ## Demander la catégorie (dans un second temps) et filtrer la liste des questions
 

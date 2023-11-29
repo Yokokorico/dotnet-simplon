@@ -1,3 +1,5 @@
+namespace Classes;
+
 public class Joueur{
     public string? Nom{
         get;

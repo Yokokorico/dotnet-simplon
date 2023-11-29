@@ -1,3 +1,5 @@
+namespace Classes;
+
 public class Resultat
     {
         public int? Reponse { get; set; }
