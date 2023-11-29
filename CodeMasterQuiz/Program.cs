@@ -1,15 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Security.Cryptography;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Text.Json;
-using System.Text.Json.Serialization;
-using Newtonsoft.Json;
-using System.Threading;
-
-namespace Classes;
+﻿namespace Classes;
 public class Program{
     const string def= " ";
     static void Main(string []args){
@@ -17,6 +6,7 @@ public class Program{
         string nom = Console.ReadLine() ?? def;
         Joueur joueur= new Joueur();
         joueur.Nom=nom;
+        Console.Clear();
         AffichageMenu.Demarrage(joueur);
     }
 }

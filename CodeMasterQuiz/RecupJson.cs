@@ -3,12 +3,12 @@ namespace Classes;
 
 public class RecupJson{
 
-    public static List<Root>? RecupJsonQuestion(string pathfile){
+    public static List<racineJson> RecupJsonQuestion(string pathfile){
         try{
             using (StreamReader r = new StreamReader(pathfile))  
             {  
                 string json = r.ReadToEnd();  
-                List<Root> myDeserializedClass = JsonConvert.DeserializeObject<List<Root>>(json) ?? new List<Root>();          
+                List<racineJson> myDeserializedClass = JsonConvert.DeserializeObject<List<racineJson>>(json) ?? new List<racineJson>();          
                 return myDeserializedClass;
             } 
         }catch (Exception){

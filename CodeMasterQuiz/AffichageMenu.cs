@@ -14,6 +14,7 @@ public class AffichageMenu{
             Console.WriteLine(sep +"Bienvenue sur CodeMaster Quiz "+joueur.Nom+" \n\n1. Pour démarrer \n2. Quitter\n"+"Votre meilleur score est de "+(joueur.Highscore ?? 0)+"\n\nVotre réponse ->");
             line = Console.ReadLine() ?? def ;
             if (line == "1"){
+                Console.Clear();
                 MenuPrincipal(joueur);
             }else if (line == "2"){
                 Console.WriteLine("Au revoir ! "+joueur.Nom);
@@ -36,7 +37,7 @@ public class AffichageMenu{
             line = Console.ReadLine() ?? def;
             if (line == "1"){
                 attente= false;
-                
+                Console.Clear();
                 AffichageQuizz.DebutQuizz(joueur,false);
             }else if(line == "2"){
                 attente=false;

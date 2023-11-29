@@ -1,54 +1,86 @@
 namespace Classes;
 
-public class AffichageQuizz{
+public class AffichageQuizz
+{
     const string sep = "\n\n--------------------------------------------------\n\n";
-    const string filepath ="../../../question.json";
+    const string filepath = "../../../question.json";
     /// <summary>
     /// Méthode de lancement du quizz
     /// </summary>
     /// <param name="joueur">Joueur actuel</param>
     /// <param name="choix">Boolean disant si l'utilisateur dois choisir sa catégorie</param>
-    public static void DebutQuizz(Joueur joueur,bool choix){
+    public static void DebutQuizz(Joueur joueur, bool choix)
+    {
 
         Random rand = new Random();
-        List<Root>  source = new List<Root>();
-        int index=1;
-        bool verif=false;
-        source = RecupJson.RecupJsonQuestion(filepath) ?? new List<Root>();
+        List<racineJson> source = new List<racineJson>();
+        int index = 1;
+        source = RecupJson.RecupJsonQuestion(filepath) ?? new List<racineJson>();
         joueur.Scoreactuel = 0;
-        if(choix){
-            Console.WriteLine("Veuillez choisir votre catégorie "+joueur.Nom +sep);
-            foreach(Root items in source){
-                Console.WriteLine(index+"."+items.Quizz[0].Category);
+        if (choix)
+        {
+            Console.WriteLine("Veuillez choisir votre catégorie " + joueur.Nom + sep);
+            foreach (racineJson itemRoot in source)
+            {
+                Console.WriteLine(index + "." + itemRoot.Quizz[0].Category);
                 index++;
             }
-            while(verif==false){
-                Console.WriteLine(sep+"Votre choix ->");
-                int num_quizz = Int32.Parse(Console.ReadLine() ?? "0")-1;
-                if(num_quizz <= source.Count && num_quizz > 0){
-                    for(int index_question = 0;index_question<10;index_question++){
-                        int numquestion = rand.Next(source[num_quizz].Quizz[0].Questions.Count);
-                        AffichageQuestion(num_quizz,numquestion,source,joueur);
-                    }
-                    verif=true;
-                }else{
-                    Console.WriteLine("Merci de bien renseigner un choix correct !");
-                }
-            }
-            Console.WriteLine("Felicitation vous avez obtenu "+joueur.Scoreactuel+" points !");
-            joueur.Highscore=joueur.Scoreactuel;
-            joueur.Scoreactuel=0;
-        }else{
-            for(int index_question = 0;index_question<10;index_question++){
+            AfficherQuestionsSiCategorie(joueur, rand, source);
+            Console.WriteLine("Felicitation vous avez obtenu " + joueur.Scoreactuel + " points !");
+            Console.WriteLine("Appuyer sur une touche pour continuer !");
+            Console.ReadLine();
+            Console.Clear();
+            joueur.Highscore = joueur.Scoreactuel;
+            joueur.Scoreactuel = 0;
+        }
+        else
+        {
+            for (int index_question = 0; index_question < 10; index_question++)
+            {
                 int numroot = rand.Next(source.Count);
                 int numquestion = rand.Next(source[numroot].Quizz[0].Questions.Count);
-                AffichageQuestion(numroot,numquestion,source,joueur);
+                AffichageQuestion(numroot, numquestion, source, joueur, index_question);
             }
-            Console.WriteLine("Felicitation vous avez obtenu "+joueur.Scoreactuel+" points !");
-            joueur.Highscore=joueur.Scoreactuel;
-            joueur.Scoreactuel=0;
-        }  
+            Console.WriteLine("Felicitation vous avez obtenu " + joueur.Scoreactuel + " points !");
+            Console.WriteLine("Appuyer sur une touche pour continuer !");
+            Console.ReadLine();
+            Console.Clear();
+            joueur.Highscore = joueur.Scoreactuel;
+            joueur.Scoreactuel = 0;
+        }
     }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="joueur"></param>
+    /// <param name="rand"></param>
+    /// <param name="source"></param>
+    private static void AfficherQuestionsSiCategorie(Joueur joueur, Random rand, List<racineJson> source)
+    {
+        var verificationBonchoix = false;
+        while (!verificationBonchoix)
+        {
+            Console.WriteLine(sep + "Votre choix ->");
+            Int32.TryParse(Console.ReadLine(),out int num_quizz);
+            num_quizz = num_quizz-1;
+            if (num_quizz <= source.Count && num_quizz > 0)
+            {
+                for (int index_question = 0; index_question < 10; index_question++)
+                {
+                    int numquestion = rand.Next(source[num_quizz].Quizz[0].Questions.Count);
+                    Console.Clear();
+                    AffichageQuestion(num_quizz, numquestion, source, joueur, index_question);
+                }
+                verificationBonchoix = true;
+            }
+            else
+            {
+                Console.WriteLine("Merci de bien renseigner un choix correct !");
+            }
+        }
+    }
+
     /// <summary>
     /// Méthode affichage d'une question
     /// </summary>
@@ -56,35 +88,48 @@ public class AffichageQuizz{
     /// <param name="numquestion">Numéro de question</param>
     /// <param name="source">Fichier json</param>
     /// <param name="joueur">Joueur actuel</param>
-    public static void AffichageQuestion(int numroot,int numquestion,List<Root>  source,Joueur joueur){
-        bool verif=false;
-        string IntituleQuestion=source[numroot].Quizz[0].Questions[numquestion].IntituleQuestion ?? "";
-        string DifficulteQuestion=source[numroot].Quizz[0].Questions[numquestion].Resultat[2].Difficulte.ToString();
+    public static void AffichageQuestion(int numroot, int numquestion, List<racineJson> source, Joueur joueur, int index_question)
+    {
+        bool verif = false;
+        string IntituleQuestion = source[numroot].Quizz[0].Questions[numquestion].IntituleQuestion ?? "";
+        string DifficulteQuestion = source[numroot].Quizz[0].Questions[numquestion].Resultat[2].Difficulte.ToString();
         string DescriptifQuestion = source[numroot].Quizz[0].Questions[numquestion].Resultat[1].Descriptif;
-        Console.WriteLine(sep+IntituleQuestion+"\nQuestion de difficulté "+DifficulteQuestion+"\nVous avez actuellement "+joueur.Scoreactuel+" points !");
+        Console.WriteLine(sep + "Question numéro" + index_question + "\n" + IntituleQuestion + "\nQuestion de difficulté " + DifficulteQuestion + "\nVous avez actuellement " + joueur.Scoreactuel + " points !");
         foreach (Reponse item in source[numroot].Quizz[0].Questions[numquestion].Reponses)
         {
-            Console.WriteLine(item.Index.ToString()+". "+item.InitituleReponse);
+            Console.WriteLine(item.Index.ToString() + ". " + item.InitituleReponse);
         }
-        while(verif==false){
+        while (!verif)
+        {
             Console.WriteLine("Entrer votre réponse ->");
             string rep = Console.ReadLine() ?? "";
-            if(rep == "1" ||rep == "2" ||rep == "3" ||rep == "4"){
-                verif=true;
-                if(Int32.Parse(rep) == source[numroot].Quizz[0].Questions[numquestion].Resultat[0].Reponse){
+            if (rep == "1" || rep == "2" || rep == "3" || rep == "4")
+            {
+                verif = true;
+                Int32.TryParse(rep,out int comparateur);
+                if ( comparateur==source[numroot].Quizz[0].Questions[numquestion].Resultat[0].Reponse)
+                {
                     Console.WriteLine("Bien joué !");
-                    Console.WriteLine(DescriptifQuestion ?? "");
-                    Console.WriteLine("Vous gagnez "+DifficulteQuestion+" points ! (Difficulté "+DifficulteQuestion+")");
-                    joueur.Scoreactuel =  source[numroot].Quizz[0].Questions[numquestion].Resultat[2].Difficulte + joueur.Scoreactuel;
-                    Thread.Sleep(2000);                   
-                } else {
-                    Console.WriteLine("Mauvaise réponse !");
-                    Console.WriteLine(DescriptifQuestion ?? "");
-                    Thread.Sleep(2000);
+                    Console.WriteLine(sep + DescriptifQuestion + sep ?? "");
+                    joueur.Scoreactuel = source[numroot].Quizz[0].Questions[numquestion].Resultat[2].Difficulte + joueur.Scoreactuel;
+                    Console.WriteLine($"Vous gagnez {DifficulteQuestion} points ! (Difficulté {DifficulteQuestion})\nVotre total de points est maintenant de {joueur.Scoreactuel}");
+                    Console.WriteLine("Appuyer sur une touche pour continuer !");
+                    Console.ReadLine();
+                    Console.Clear();
                 }
-            }else{
+                else
+                {
+                    Console.WriteLine("Mauvaise réponse ! C'était la réponse numéro " + source[numroot].Quizz[0].Questions[numquestion].Resultat[0].Reponse);
+                    Console.WriteLine(sep + DescriptifQuestion + sep ?? "");
+                    Console.WriteLine("Appuyer sur une touche pour continuer !");
+                    Console.ReadLine();
+                    Console.Clear();
+                }
+            }
+            else
+            {
                 Console.WriteLine("Merci de bien vouloir répondre par 1,2,3 ou 4 !");
             }
         }
     }
-} 
+}

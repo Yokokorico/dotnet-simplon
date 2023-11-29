@@ -1,6 +1,6 @@
 namespace Classes;
 
-public class Root
-    {
-        public List<Quizz>? Quizz { get; set; }
-    }
+public class racineJson
+{
+    public List<Quizz> Quizz { get; set; }
+}

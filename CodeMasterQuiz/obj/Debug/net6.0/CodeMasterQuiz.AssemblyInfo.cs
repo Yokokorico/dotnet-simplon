@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CodeMasterQuiz")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7596a9c61704d0074411579ec49345a046f0d52a")]
 [assembly: System.Reflection.AssemblyProductAttribute("CodeMasterQuiz")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CodeMasterQuiz")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
