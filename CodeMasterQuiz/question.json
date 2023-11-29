@@ -12,11 +12,11 @@
               { "Index":3,"InitituleReponse": "Hyperspace TradeMark Language" },
               { "Index":4,"InitituleReponse": "XpTdr Mdr Lol" }
             ],
-        "Resultat":[
-        {"Reponse" : 2},
-        {"Descriptif": "Ceci est une description totalement harsardeuse pour justifier que ca marche"},
-        {"Difficulte":1}
-        ]
+            "Resultat":[
+              {"Reponse" : 2},
+              {"Descriptif": "Ceci est une description totalement harsardeuse pour justifier que ca marche"},
+              {"Difficulte":1}
+            ]
           },
           {
             "IntituleQuestion": "À quoi sert HTML ?",
@@ -26,11 +26,11 @@
               { "Index":3,"InitituleReponse": "À créer des pages dynamiques " },
               { "Index":4,"InitituleReponse": "À concurrencer Google et Facebook" }
             ],
-        "Resultat":[
-        {"Reponse" : 2},
-        {"Descriptif": "Ceci est une description totalement harsardeuse pour justifier que ca marche"},
-        {"Difficulte":1}
-        ]
+            "Resultat":[
+              {"Reponse" : 2},
+              {"Descriptif": "Ceci est une description totalement harsardeuse pour justifier que ca marche"},
+              {"Difficulte":1}
+            ]
           },
           {
             "IntituleQuestion": "En quelle année est né HTML ?",
@@ -40,25 +40,25 @@
               { "Index":3,"InitituleReponse": "En 1990 exactement, avec la naissance d'Emma Watson" },
               { "Index":4,"InitituleReponse": "Plutôt en 1993 non ? Sous le mandat Bill Clinton" }
             ],
-        "Resultat":[
-        {"Reponse" : 4},
-        {"Descriptif": "Ceci est une description totalement harsardeuse pour justifier que ca marche"},
-        {"Difficulte":3}
-        ]
+            "Resultat":[
+              {"Reponse" : 4},
+              {"Descriptif": "Ceci est une description totalement harsardeuse pour justifier que ca marche"},
+              {"Difficulte":3}
+            ]
           },
           {
             "IntituleQuestion": "Qu'est ce qu'un navigateur web ?",
-            "Reponses": [
-              { "Index":1,"InitituleReponse": "Un logiciel capable d'interpréter et d'afficher du code HTML" },
-              { "Index":2,"InitituleReponse": "Un outil permettant d'accéder à Internet " },
-              { "Index":3,"InitituleReponse": "Un réseau social global " },
-              { "Index":4,"InitituleReponse": "La toute première application mondiale " }
-            ],
-        "Resultat":[
-        {"Reponse" : 1},
-        {"Descriptif": "Ceci est une description totalement harsardeuse pour justifier que ca marche"},
-        {"Difficulte":2}
-        ]
+          "Reponses": [
+            { "Index":1,"InitituleReponse": "Un logiciel capable d'interpréter et d'afficher du code HTML" },
+            { "Index":2,"InitituleReponse": "Un outil permettant d'accéder à Internet " },
+            { "Index":3,"InitituleReponse": "Un réseau social global " },
+            { "Index":4,"InitituleReponse": "La toute première application mondiale " }
+          ],
+            "Resultat":[
+              {"Reponse" : 1},
+              {"Descriptif": "Ceci est une description totalement harsardeuse pour justifier que ca marche"},
+              {"Difficulte":2}
+            ]
           }
         ]
       }
@@ -77,11 +77,11 @@
               { "Index":3,"InitituleReponse": "Ouais" },
               { "Index":4,"InitituleReponse": "Bof" }
             ],
-        "Resultat":[
-        {"Reponse" : 1},
-        {"Descriptif": "Ceci est une description totalement harsardeuse pour justifier que ca marche"},
-        {"Difficulte":2}
-        ]
+            "Resultat":[
+              {"Reponse" : 1},
+              {"Descriptif": "Ceci est une description totalement harsardeuse pour justifier que ca marche"},
+              {"Difficulte":2}
+            ]
           }
         ]
       }

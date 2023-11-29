@@ -5,12 +5,12 @@ public class Joueur{
         get;
         set;        
     }
-    public int? Highscore{
+    public float Highscore{
         get;
         set;
     }
 
-    public int? Scoreactuel{
+    public float Scoreactuel{
         get;
         set;
     }
