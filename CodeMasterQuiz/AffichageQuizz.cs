@@ -44,14 +44,12 @@ public class AffichageQuizz
 
     private static void AffichageFinDeQuizz(Joueur joueur)
     {
-        Console.WriteLine($"Felicitation vous avez obtenu {joueur.Scoreactuel} points !");
-        Console.WriteLine("Appuyer sur une touche pour continuer !");
+        Console.WriteLine($"Felicitation vous avez obtenu {joueur.Scoreactuel.ToString("#.##")} points !\nAppuyer sur une touche pour continuer !");
         Console.ReadLine();
         Console.Clear();
         joueur.Highscore = joueur.Scoreactuel;
         joueur.Scoreactuel = 0;
     }
-
     /// <summary>
     /// 
     /// </summary>
@@ -83,7 +81,6 @@ public class AffichageQuizz
             }
         }
     }
-
     /// <summary>
     /// Méthode affichage d'une question
     /// </summary>
@@ -97,7 +94,9 @@ public class AffichageQuizz
         string IntituleQuestion = source[numroot].Quizz[0].Questions[numquestion].IntituleQuestion ?? "";
         string DifficulteQuestion = source[numroot].Quizz[0].Questions[numquestion].Resultat[2].Difficulte.ToString();
         string DescriptifQuestion = source[numroot].Quizz[0].Questions[numquestion].Resultat[1].Descriptif;
-        Console.WriteLine($"{sep}Question numéro {index_question}\n{IntituleQuestion}\nQuestion de difficulté {DifficulteQuestion}\nVous avez actuellement {joueur.Scoreactuel} points !");
+        Stopwatch stopwatch = new Stopwatch();
+        stopwatch.Start();
+        Console.WriteLine($"{sep}Question numéro {index_question+1}\nQuestion de difficulté {DifficulteQuestion}\nVous avez actuellement {joueur.Scoreactuel.ToString("#.##")} points !\n\n{IntituleQuestion}\n");
         foreach (Reponse item in source[numroot].Quizz[0].Questions[numquestion].Reponses)
         {
             Console.WriteLine(item.Index.ToString() + ". " + item.InitituleReponse);
@@ -105,36 +104,11 @@ public class AffichageQuizz
         while (!verif)
         {
             Console.WriteLine("Entrer votre réponse ->");
-            Stopwatch stopwatch = new Stopwatch();
-            stopwatch.Start();
             string rep = Console.ReadLine() ?? "";
             if (rep == "1" || rep == "2" || rep == "3" || rep == "4")
             {
                 verif = true;
-                Int32.TryParse(rep,out int comparateur);
-                if ( comparateur==source[numroot].Quizz[0].Questions[numquestion].Resultat[0].Reponse)
-                {
-                    stopwatch.Stop();
-                    Console.WriteLine($"Vous avez mis {stopwatch.ElapsedMilliseconds/1000} secondes pour répondre");
-                    Console.WriteLine("Bien joué !");
-                    Console.WriteLine($"{sep}{DescriptifQuestion}{sep}" ?? "");
-                    float multiplicateur = (float)stopwatch.ElapsedMilliseconds/10000;
-                    float pointGagner = (float)(source[numroot].Quizz[0].Questions[numquestion].Resultat[2].Difficulte*multiplicateur);
-                    joueur.Scoreactuel = joueur.Scoreactuel+pointGagner;
-                    Console.WriteLine("Vous gagnez "+pointGagner.ToString("#.##")+ " points ! Difficulté "+DifficulteQuestion+"x"+multiplicateur.ToString("#.##")+"\nVotre total de points est maintenant de "+joueur.Scoreactuel);
-                    Console.WriteLine("Appuyer sur une touche pour continuer !");
-                    Console.ReadLine();
-                    stopwatch.Reset();
-                    Console.Clear();
-                }
-                else
-                {
-                    Console.WriteLine($"Mauvaise réponse ! C'était la réponse numéro {source[numroot].Quizz[0].Questions[numquestion].Resultat[0].Reponse}");
-                    Console.WriteLine($"{sep}{DescriptifQuestion}{sep}" ?? "");
-                    Console.WriteLine("Appuyer sur une touche pour continuer !");
-                    Console.ReadLine();
-                    Console.Clear();
-                }
+                CalculPoint.CalculDesPoints(numroot, numquestion, source, joueur, DifficulteQuestion, DescriptifQuestion, stopwatch, rep);
             }
             else
             {

@@ -11,7 +11,7 @@ public class AffichageMenu{
         string line = "";
         bool attente = true;
         while (attente == true){
-            Console.WriteLine(sep +"Bienvenue sur CodeMaster Quiz "+joueur.Nom+" \n\n1. Pour démarrer \n2. Quitter\n"+"Votre meilleur score est de "+joueur.Highscore+"\n\nVotre réponse ->");
+            Console.WriteLine(sep +"Bienvenue sur CodeMaster Quiz "+joueur.Nom+" \n\n1. Pour démarrer \n2. Quitter\n"+"Votre meilleur score est de "+joueur.Highscore.ToString("#.##") +"\n\nVotre réponse ->");
             line = Console.ReadLine() ?? def ;
             if (line == "1"){
                 Console.Clear();
@@ -19,6 +19,9 @@ public class AffichageMenu{
             }else if (line == "2"){
                 Console.WriteLine("Au revoir ! "+joueur.Nom);
                 Environment.Exit(0);
+            }else if(line =="3") {
+                Console.WriteLine("Au revoir ! "+joueur.Nom);
+                
             }else {
                 Console.WriteLine("Merci de bien répondre par 1,2 ou 3");
             }

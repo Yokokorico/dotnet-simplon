@@ -1,16 +1,16 @@
 namespace Classes;
 
 public class Joueur{
-    public string? Nom{
+    public string Nom{
         get;
         set;        
     }
-    public float Highscore{
+    public double Highscore{
         get;
         set;
     }
 
-    public float Scoreactuel{
+    public double Scoreactuel{
         get;
         set;
     }
